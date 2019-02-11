@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hero App | New</title>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote-lite.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <style>
+        body { padding-top:15px; background-color: #ccc;}
+        img { width: 100%;}
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="panel panel-danger">
+            <div class="panel panel-heading text-center">
+                <h1>Blog Post App</h1>
+            </div>
+            <div class="panel-body" id="all">
+
+                <% if (message) { %>
+                <div class="alert alert-success" role="alert">
+                    <%= message %>
+                </div>
+                <% } %> 
+                
+                <form method="POST" action="">
+                    <div class="form-group col-xs-12 col-sm-6 col-sm-offset-3">
+                        <label for="Title">Title</label>
+                        <input type="text" class="form-control" id="Title" aria-describedby="heroName" placeholder="Enter Title " name="name">
+                        <!-- <small id=heroName" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                    </div>
+                    <div class="form-group col-xs-12 col-sm-6 col-sm-offset-3">
+                        <label for="Author">Author</label>
+                        <input type="text" class="form-control" id="Author" placeholder="Authors name" name="author">
+                    </div>
+                    <div class="form-group col-xs-12 col-sm-6 col-sm-offset-3">
+                        <label for="exampleInputURL">Image URL</label>
+                        <input type="text" class="form-control" id="exampleInputURL" placeholder="Link to Blog" name="image_url">
+                    </div>
+                    <div class="form-group col-xs-12 col-sm-6 col-sm-offset-3">
+                        <label for="summernote">Post:</label>
+                        <textarea class="summernote" name="content">Content will be aded here</textarea>
+                        <button id="edit" class="btn btn-primary" onclick="edits()" type="button">Edit</button>
+                        <button id="save" class="btn btn-primary" onclick="saves()" type="button">Save</button>
+                    </div>
+                    <!-- <div class="col-xs-12 col-sm-4 col-sm-offset-4"> -->
+                            <!-- <h3>Content Post</h3> -->
+                        <!-- <div class="panel-footer"> -->
+                            <!-- <div class="summernote"></div> -->
+                            <!-- <div class="summernote"><p>Content will be aded here</p></div> -->
+                            <!-- <label for="summernote">Post:</label>
+                            <textarea class="summernote" name="content">Content will be aded here</textarea>
+                            <button id="edit" class="btn btn-primary" onclick="edits()" type="button">Edit</button>
+                            <button id="save" class="btn btn-primary" onclick="saves()" type="button">Save</button> -->
+                        <!-- </div> -->
+                        <!-- </div> -->
+                    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+                        <button type="submit" class="btn btn-success btn-block">Add POST</button>
+                    </div>
+                </form>
+
+            </div>
+            <div class="panel-footer text-center">
+                <p>All rights reserved 2019 | Giordi </p>
+            </div>
+        </div>
+    </div>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script> 
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote-lite.js"></script>  
+    
+    <script>
+        var edits = function() {
+    $('.summernote').summernote({focus: true});
+    };
+    var saves = function() {
+    var markup = $('.summernote').summernote('code');
+    $('.summernote').summernote('destroy');
+    };
+    $(document).ready(function() {
+//   $('#summernote').summernote();
+});
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hero App | New</title>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote-lite.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <style>
+        body { padding-top:15px; background-color: #ccc;}
+        img { width: 100%;}
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="panel panel-danger">
+            <div class="panel panel-heading text-center">
+                <h3 class="text-center"><%= post.author %></h3>
+            </div>
+            <div class="panel-body" id="all">
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+                        <img src="<%= post.image %>">
+                        <h2>"<%= post.title %>"</h2>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+                        <h2 src="<%= post.name %>" </h2>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+                        <!-- <div id="summernote"><p><%-post.content %></p></div> -->
+                        <div class="panel-footer">
+                            <!-- <div class="summernote"></div> -->
+                            <div class="summernote"><%-post.content %></div>
+                            <!-- <button id="edit" class="btn btn-primary" onclick="edit()" type="button">Edit</button>
+                            <button id="save" class="btn btn-primary" onclick="save()" type="button">Save</button> -->
+                         </div>
+                    </div>
+                    
+                    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+                        <br>
+                        <a href="/update/<%= post.id %>" class="btn btn-block btn-primary">Update</a>
+                        <br>
+                        <a href="/delete/<%= post.id %>" class="btn btn-block btn-danger">Delete</a>
+                    </div>
+                </div>  
+
+            </div>
+            <div class="panel-footer text-center">
+                <p>All rights reserved 2019 | Giordi.</p>
+            </div>
+        </div>
+    </div>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script> 
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote-lite.js"></script>  
+    
+    <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.js"></script> -->
+
+    <script> 
+    var edit = function() {
+    $('.summernote').summernote({focus: true});
+    };
+    var save = function() {
+    var markup = $('.summernote').summernote('code');
+    $('.summernote').summernote('destroy');
+    };
+    $(document).ready(function() {
+        // $('.summernote').summernote();
+
+            
+           
+
+        
+    });
+    
+  </script>
+</body>
+</html>
