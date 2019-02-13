@@ -11,7 +11,9 @@ router.get('/:pokeId', function(req, res, next) {
     }, function(error, response, body) {
         // console.log(JSON.parse(body));
         //send a response message
-        res.render('view', {post: JSON.parse(body)});
+        res.render('view', {poke: JSON.parse(body)});
+        // res.send('view', {});
+
     });
 })
 

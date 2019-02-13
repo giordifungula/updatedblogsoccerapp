@@ -11,7 +11,8 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res, next) {
 
     //test if data is coming through
-    // res.send(req.body);
+    // res.send(res.body);
+    // req.send(res.body);
 
     //set a new dynamic id
     var id = Pokemon.pokemon.length;
@@ -29,13 +30,14 @@ router.post('/', function(req, res, next) {
         // Collecting name on HTML form to use 
     }
     }, function(error, response, body) {
-        // console.log(body);
+        console.log(body);
         //send a response message
         res.render('create', {message: 'Successfully Added.'});
         // .body displays the body of the content added from json file
-        res.render('view', {});
+        // res.render('view', {});
+        
     });
-    // res.send(req.body);
+    // res.render('view', {});
 
 })
 
