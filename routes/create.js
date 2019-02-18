@@ -22,7 +22,7 @@ router.post('/', function(req, res, next) {
     uri: "http://localhost:8000/pokemon/",
     method: "POST",
     form: {
-        id: id,
+        id: req.body.id,
         title: req.body.title,
         author: req.body.author,
         image: req.body.image_url,

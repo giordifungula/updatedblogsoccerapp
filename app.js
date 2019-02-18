@@ -17,7 +17,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 //bodyParser Middleware
-app.use(bodyParser.json() );       // to support JSON-encoded bodies
+app.use(bodyParser.json());       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //this is not needed if you have bodyParser
@@ -32,7 +32,7 @@ app.use('/', indexRouter);
 app.use('/create', createRouter);
 app.use('/view', viewRouter);
 app.use('/update', updateRouter);
-app.use('/archive', archiveRouter);
+// app.use('/archive', archiveRouter);
 app.use('/delete', deleteRouter);
 
 // app.use('/', express.static(__dirname + '/www')); // redirect root
