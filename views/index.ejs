@@ -19,11 +19,25 @@
 
         body {
     font-family: 'Hind', sans-serif;
-    background: url('https://images.unsplash.com/photo-1508697371770-529139794f8b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');
+    /* background: url('https://images.unsplash.com/photo-1508697371770-529139794f8b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80'); */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
   }
+  /* Background Image */
+  .contain {
+    background: url('https://images.unsplash.com/photo-1508697371770-529139794f8b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');
+    /* background: #000000; */
+  }
+.panel {
+    /* background: #000000; */
+    background:url('https://images.unsplash.com/photo-1508697371770-529139794f8b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');
+    /* linear-gradient(to left ,#3dfaaa, rgb(29, 3, 3) ); */
+    
+    
+}
+
+
   .panel-heading {
       text-align: center;
       border-bottom: 1px #ccc solid;
@@ -53,7 +67,7 @@
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: cover;
-      background-color: #999;
+      /* background-color: #999; */
   }
   .is-hero-image:before {
       content: '';
@@ -123,7 +137,7 @@
                     <a class="navbar-item is-blue">
                       Register
                     </a>
-                     <a href="/error" class="navbar-item is-blue" >
+                     <a href="/archive" class="navbar-item is-blue" >
                       Archives
                     </a>
                   </div>
@@ -152,11 +166,11 @@
           </div>
         </section>
         </div>
-    <div class="containe">
+    <div class="contain">
         <% if (title) { %>
             <h2 class="center"><%= title %></h2>
         <% } %>
-        <div class="panel panel-danger">
+        <div class="panel panel-success">
             <div class="panel panel-heading text-center panel-danger">
                 <h1 class="center">Soccer Blog Posts</h1>
             </div>
