@@ -3,6 +3,8 @@ We will be creating a blog page that allows users to log in and post articles
 Updated Soccer blog page
 
 ---
+## Live Link
+- https://soccer-blog-site.herokuapp.com/
 ## About Project
 - We are building a Blog Page concerning your interests and hobbies.
 - Blog will allow you post log in and create articles, view  blogs,edit and delete when logged in.
