@@ -48,7 +48,7 @@
   }
   
   .is-hero-image {
-     background-image: url("https://png.pngtree.com/thumb_back/fw800/back_pic/04/62/30/08586f7b348262d.jpg");
+     background-image: url("https://previews.123rf.com/images/efks/efks1503/efks150300027/37691198-soccer-stadium.jpg");
       background-position: center center;
       background-repeat: no-repeat;
       background-attachment: fixed;
@@ -152,7 +152,7 @@
           </div>
         </section>
         </div>
-    <div class="container">
+    <div class="containe">
         <% if (title) { %>
             <h2 class="center"><%= title %></h2>
         <% } %>
@@ -183,7 +183,7 @@
 
                 <% pokemon.pokemon.forEach(function(poke){ %>
                     <a href="/view/<%-poke.id %>">
-                        <div class="col-md-4 col-md-4">
+                        <div class="col-md-3 col-md-4">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h5><%-poke.author %></h5>
@@ -196,8 +196,8 @@
                                 </div>
                                 <div class="panel-footer">
                                     <!-- <div class="summernote"></div> -->
-                                    <!-- <div class="summernote"><p><%-poke.content %></p></div> -->
-                                    <textarea class="summernote" name="content"><p><%-poke.content %></p></textarea> <br>
+                                    <div class="summernote" name="content"><p><%-poke.content %></p></div>
+                                    <!-- <textarea class="summernote" name="content"><p><%-poke.content %></p></textarea> <br> -->
                                     <button id="edit" class="btn btn-primary" onclick="edit()" type="button">Edit</button>
                                     <button id="save" class="btn btn-primary" onclick="save()" type="button">Save</button>
                                 </div>

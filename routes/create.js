@@ -23,7 +23,7 @@ router.post('/', function(req, res, next) {
     method: "POST",
     form: {
         id: req.body.id,
-        title: req.body.title,
+        title: req.body.name,
         author: req.body.author,
         image: req.body.image_url,
         content: req.body.content
@@ -35,7 +35,6 @@ router.post('/', function(req, res, next) {
         res.render('create', {message: 'Successfully Added.'});
         // .body displays the body of the content added from json file
         // res.render('view', {});
-        
     });
     // res.render('view', {});
 
