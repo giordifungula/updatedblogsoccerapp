@@ -17,5 +17,8 @@
     "nodemon": "^1.18.9",
     "popper.js": "^1.14.7",
     "request": "^2.88.0"
+  },
+  "engines": {
+    "node": "8.11.3"
   }
 }

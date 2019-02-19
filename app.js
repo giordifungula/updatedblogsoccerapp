@@ -41,6 +41,13 @@ app.use('/delete', deleteRouter);
 // app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css')); // redirect CSS bootstrap
 
 module.exports = app;
-app.listen(8080);
+// app.listen(8080);
+
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8080;
+}
+app.listen(port);
+
 
 // Either set to 80 or hide the 8000 port content is added and all is viewing
